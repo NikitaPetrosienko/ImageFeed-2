@@ -3,7 +3,7 @@ import UIKit
 final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = UIColor(named: "YPBlack")
         let avatarimageView = UIImageView(image: UIImage(named: "avatar"))
         view.addSubview(avatarimageView)
         avatarimageView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ final class ProfileViewController: UIViewController {
             logoutButton.heightAnchor.constraint(equalToConstant: 44),
             logoutButton.widthAnchor.constraint(equalToConstant: 44)
             
-               ])
+        ])
         
     }
 }
