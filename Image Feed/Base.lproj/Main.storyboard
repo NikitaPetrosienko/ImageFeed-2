@@ -181,6 +181,9 @@
                         <viewLayoutGuide key="safeArea" id="ASx-Sp-Xhq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="eHw-UA-z2G" kind="presentation" identifier="ShowAuthScreen" id="3K0-Fe-yvn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AC2-mP-Qr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +211,7 @@
             <objects>
                 <viewController id="JoV-xB-Nse" customClass="AuthViewController" customModule="Image_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDd-2j-MkA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-ks-SuU">
@@ -218,7 +221,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Ya-idb">
-                                <rect key="frame" x="16" y="724" width="382" height="48"/>
+                                <rect key="frame" x="16" y="724" width="382" height="34.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="0Qu-Ea-9uc"/>
@@ -244,6 +247,7 @@
                         <constraints>
                             <constraint firstItem="WLk-Ef-vLu" firstAttribute="trailing" secondItem="vaz-Ya-idb" secondAttribute="trailing" constant="16" id="6Jg-bX-7FN"/>
                             <constraint firstItem="WLk-Ef-vLu" firstAttribute="bottom" secondItem="vaz-Ya-idb" secondAttribute="bottom" constant="90" id="BGy-Md-AgT"/>
+                            <constraint firstItem="nK0-ks-SuU" firstAttribute="top" secondItem="WLk-Ef-vLu" secondAttribute="top" constant="362" id="Geb-uQ-PaC"/>
                             <constraint firstItem="vaz-Ya-idb" firstAttribute="top" secondItem="nK0-ks-SuU" secondAttribute="top" constant="306" id="O3w-QC-kOx"/>
                             <constraint firstItem="nK0-ks-SuU" firstAttribute="centerY" secondItem="fDd-2j-MkA" secondAttribute="centerY" id="chn-7v-IBb"/>
                             <constraint firstItem="nK0-ks-SuU" firstAttribute="centerX" secondItem="WLk-Ef-vLu" secondAttribute="centerX" id="dGM-ov-SeC"/>
@@ -261,11 +265,11 @@
             <objects>
                 <viewController id="PGg-pd-ENZ" customClass="WebViewViewController" customModule="Image_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IGL-Jo-5fS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8d-bE-SlP">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="796"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -273,7 +277,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" progressImage="0,5" translatesAutoresizingMaskIntoConstraints="NO" id="xq3-fZ-WKP">
-                                <rect key="frame" x="0.0" y="92" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="4"/>
                                 <color key="progressTintColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                         </subviews>
@@ -325,11 +329,11 @@
         <!--Navigation Controller-->
         <scene sceneID="YZ9-j5-PDX">
             <objects>
-                <navigationController storyboardIdentifier="AuthNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="eHw-UA-z2G" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AuthNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHw-UA-z2G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LPe-8z-FEj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PmE-QM-FH9">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
